@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Academic Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="logo">
+            <span>J</span>
+            <div>
+                <strong>Academic</strong>
+                <small>Portfolio</small>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#scores">Scores</a>
+            <a href="#uploads">Uploads</a>
+            <a href="#about">About Me</a>
+        </nav>
+
+        <button id="themeBtn" class="theme-btn">☾</button>
+    </header>
+
+
+    <!-- HERO / HOME -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO MY PORTFOLIO</p>
+
+            <h1>
+                My <span>Academic</span><br>
+                Journey
+            </h1>
+
+            <p class="hero-text">
+                This portfolio showcases my academic performance,
+                activities, laboratory works, projects, and progress
+                throughout my studies.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#scores" class="primary-btn">
+                    View My Scores →
+                </a>
+
+                <a href="#about" class="secondary-btn">
+                    About Me
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="profile-circle">
+                <img src="blob:https://www.facebook.com/d2c3f94b-42c4-4290-968e-0532514d4914" alt="John David Javier profile photo">
+            </div>
+
+            <h2>John David Javier</h2>
+
+            <p>Computer Science Student</p>
+
+            <div class="mini-stats">
+
+                <div>
+                    <strong id="heroAverage">0%</strong>
+                    <span>Average</span>
+                </div>
+
+                <div>
+                    <strong id="heroUploads">0</strong>
+                    <span>Files</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCORES -->
+    <section id="scores" class="section">
+
+        <div class="section-heading">
+            <p>ACADEMIC PERFORMANCE</p>
+            <h2>My <span>Scores</span></h2>
+            <small>Track my performance in different academic activities.</small>
+        </div>
+
+        <div class="score-grid">
+
+            <!-- QUIZ -->
+            <div class="score-card">
+                <div class="icon">📝</div>
+                <h3>Quiz</h3>
+
+                <div class="score-input">
+                    <input type="number" id="quizScore" min="0" max="100" value="0">
+                    <span>/ 100</span>
+                </div>
+
+                <div class="progress">
+                    <div id="quizProgress"></div>
+                </div>
+
+                <p>Quiz Performance</p>
+            </div>
+
+
+            <!-- LONG QUIZ -->
+            <div class="score-card">
+                <div class="icon">📚</div>
+                <h3>Long Quiz</h3>
+
+                <div class="score-input">
+                    <input type="number" id="longQuizScore" min="0" max="100" value="0">
+                    <span>/ 100</span>
+                </div>
+
+                <div class="progress">
+                    <div id="longQuizProgress"></div>
+                </div>
+
+                <p>Long Quiz Performance</p>
+            </div>
+
+
+            <!-- MIDTERMS -->
+            <div class="score-card">
+                <div class="icon">📖</div>
+                <h3>Midterms</h3>
+
+                <div class="score-input">
+                    <input type="number" id="midtermScore" min="0" max="100" value="0">
+                    <span>/ 100</span>
+                </div>
+
+                <div class="progress">
+                    <div id="midtermProgress"></div>
+                </div>
+
+                <p>Midterm Performance</p>
+            </div>
+
+
+            <!-- FINALS -->
+            <div class="score-card">
+                <div class="icon">🎓</div>
+                <h3>Finals</h3>
+
+                <div class="score-input">
+                    <input type="number" id="finalScore" min="0" max="100" value="0">
+                    <span>/ 100</span>
+                </div>
+
+                <div class="progress">
+                    <div id="finalProgress"></div>
+                </div>
+
+                <p>Final Examination</p>
+            </div>
+
+
+            <!-- LAB -->
+            <div class="score-card">
+                <div class="icon">💻</div>
+                <h3>Laboratory</h3>
+
+                <div class="score-input">
+                    <input type="number" id="labScore" min="0" max="100" value="0">
+                    <span>/ 100</span>
+                </div>
+
+                <div class="progress">
+                    <div id="labProgress"></div>
+                </div>
+
+                <p>Laboratory Performance</p>
+            </div>
+
+
+            <!-- PROJECT -->
+            <div class="score-card">
+                <div class="icon">🚀</div>
+                <h3>Project</h3>
+
+                <div class="score-input">
+                    <input type="number" id="projectScore" min="0" max="100" value="0">
+                    <span>/ 100</span>
+                </div>
+
+                <div class="progress">
+                    <div id="projectProgress"></div>
+                </div>
+
+                <p>Final Project</p>
+            </div>
+
+        </div>
+
+
+        <!-- OVERALL -->
+        <div class="overall-card">
+
+            <div>
+                <p>OVERALL PERFORMANCE</p>
+                <h2 id="overallScore">0%</h2>
+            </div>
+
+            <div class="overall-info">
+                <span id="performanceText">Enter your scores above</span>
+
+                <div class="big-progress">
+                    <div id="overallProgress"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- UPLOAD SECTION -->
+    <section id="uploads" class="section uploads-section">
+
+        <div class="section-heading">
+            <p>ACADEMIC DOCUMENTATION</p>
+            <h2>My <span>Uploads</span></h2>
+            <small>Upload pictures of your academic activities.</small>
+        </div>
+
+
+        <div class="upload-container">
+
+            <div class="category-selector">
+
+                <label>Select Category</label>
+
+                <select id="uploadCategory">
+
+                    <option value="quiz">Quiz</option>
+                    <option value="longQuiz">Long Quiz</option>
+                    <option value="midterm">Midterms</option>
+                    <option value="final">Finals</option>
+                    <option value="laboratory">Laboratory</option>
+                    <option value="project">Project</option>
+
+                </select>
+
+            </div>
+
+
+            <label class="upload-box" for="fileInput">
+
+                <div class="upload-icon">
+                    ↑
+                </div>
+
+                <h3>Upload Pictures</h3>
+
+                <p>
+                    Click here or drag pictures into this area
+                </p>
+
+                <small>
+                    JPG, JPEG, PNG • Multiple images supported
+                </small>
+
+            </label>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept="image/*"
+                multiple
+                hidden
+            />
+
+        </div>
+
+
+        <!-- UPLOADED IMAGES -->
+        <div class="gallery" id="gallery"></div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
+
+        <div class="about-content">
+
+            <p class="small-title">ABOUT ME</p>
+
+            <h2>
+                Hi, I'm <span>John David.</span>
+            </h2>
+
+            <p>
+                I am a Computer Science student who is continuously
+                learning and improving my skills in programming,
+                technology, and software development.
+            </p>
+
+            <p>
+                This academic portfolio represents my progress,
+                achievements, activities, laboratory exercises,
+                examinations, and projects throughout my studies.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <div class="about-item">
+                <span>👨‍💻</span>
+                <div>
+                    <strong>Course</strong>
+                    <p>Computer Science</p>
+                </div>
+            </div>
+
+            <div class="about-item">
+                <span></span>
+                <div>
+                    <strong>Goal</strong>
+                    <p>Improve my technical skills</p>
+                </div>
+            </div>
+
+            <div class="about-item">
+                <span></span>
+                <div>
+                    <strong>Interest</strong>
+                    <p>Programming & Technology</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>Academic Portfolio</h3>
+
+        <p>
+            My journey, progress, and achievements.
+        </p>
+
+        <small>
+            © 2026 John David Javier
+        </small>
+
+    </footer>
+
+
+    <!-- IMAGE MODAL -->
+    <div class="modal" id="imageModal">
+
+        <button class="close-modal" id="closeModal">
+            ×
+        </button>
+
+        <img id="modalImage" src="" alt="Preview">
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
